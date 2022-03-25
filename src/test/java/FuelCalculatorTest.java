@@ -40,8 +40,12 @@ public class FuelCalculatorTest {
 
     @Test
     void countLine_is_correct(){
-       // assertTrue(FuelCalculator.countLine(), 100);
+       assertEquals(FuelCalculator.countLine(new File("PuzzleInput")), 100);
+    }
 
+    @Test
+    void countLine_is_not_correct(){
+       assertNotEquals(FuelCalculator.countLine(new File("PuzzleInput")), 101);
     }
 
     @Test

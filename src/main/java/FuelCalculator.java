@@ -8,10 +8,9 @@ import java.util.Scanner;
 public class FuelCalculator {
 //https://www.geeksforgeeks.org/different-ways-reading-text-file-java/
 
-    protected static int countLine(String PuzzleInput) {
-        Path path = Paths.get("PuzzleInput");
+    protected static int countLine(File PuzzleInput) {
         int lines = 0;
-
+        Path path = Paths.get("C:\\Users\\mathi\\IdeaProjects\\prog2-ss21-exercise1\\src\\test\\resources\\PuzzleInput");
         try {
             lines = (int) Files.lines(path).count();
         } catch (IOException e) {
