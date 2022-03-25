@@ -10,7 +10,7 @@ public class FuelCalculator {
 
     protected static int countLine(File PuzzleInput) {
         int lines = 0;
-        Path path = Paths.get("\\PuzzleInput.txt");
+        Path path = Paths.get("C:\\Users\\mathi\\IdeaProjects\\prog2-ss21-exercise1\\src\\test\\resources\\PuzzleInput.txt");
         try {
             lines = (int) Files.lines(path).count();
         } catch (IOException e) {
@@ -56,8 +56,5 @@ public class FuelCalculator {
         }
         return total;
     }
-
-
-
 
 }

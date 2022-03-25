@@ -8,18 +8,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class FuelCalculatorTest {
 
-
-    /*  100 modules
-        fuel per module = (int/3)-2 divison rounded down
-        Sum of fuel needed
-
-        Test if file is reachable/readable/Content is right
-        Test if 0
-        Test if negative number
-        Test if calculation is done right
-
-     */
-
     //Test Case 1 if the file is available
     @Test
     void file_is_available(){
@@ -87,6 +75,5 @@ public class FuelCalculatorTest {
     void sumTotalFuel() throws FileNotFoundException {
         assertEquals(FuelCalculator.sumTotalFuel(0),4943923);
     }
-
 
 }
