@@ -1,7 +1,10 @@
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class FuelCalculatorTest {
 
@@ -20,20 +23,24 @@ public class FuelCalculatorTest {
 
     @Test
     void file_is_available(){
-    File f = new File("C:\\Users\\mathi\\IdeaProjects\\prog2-ss21-exercise1\\src\\test\\resources\\PuzzleInput");
-    assertTrue(f.exists());
-    }
-
-    private void assertTrue(boolean exists) {
+        File f = new File("C:\\Users\\mathi\\IdeaProjects\\prog2-ss21-exercise1\\src\\test\\resources\\PuzzleInput");
+        assertTrue(f.exists());
     }
 
     @Test
-    void file_has_modules(){
+    void file_is_not_available(){
+        File f = new File("C:\\Users\\mathi\\IdeaProjects\\prog2-ss21-exercise1\\src\\test\\resources\\PuzzleInput2");
+        assertFalse(f.exists());
+    }
+
+    @Test
+    void file_has_modules() {
 
     }
 
     @Test
-    void number_of_modules_is_correct(){
+    void countLine_is_correct(){
+       // assertTrue(FuelCalculator.countLine(), 100);
 
     }
 
@@ -47,5 +54,12 @@ public class FuelCalculatorTest {
 
     }
 
+    @Test
+    void fuelRequirement_works_correct() {
+        assertEquals(FuelCalculator.fuelRequirement(12),2);
+        assertEquals(FuelCalculator.fuelRequirement(14),2);
+        assertEquals(FuelCalculator.fuelRequirement(1969),654);
+        assertEquals(FuelCalculator.fuelRequirement(100756),33583);
+    }
 
 }
